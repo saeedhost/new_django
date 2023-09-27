@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Form Data Here</h3>
+
+<div class="container">
+  <Table border="1" width="1300px">
+    <tr bgcolor="skyblue">
+        <th>Id.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Website Link</th>
+        <th>Country</th>
+        <th>Message</th>
+    </tr>
+    {% for d in alldata %}
+    <tr>
+        <td>{{d.id}}</td>
+        <td>{{d.Name}}</td>
+        <td>{{d.Email}}</td>
+        <td>{{d.Phone}}</td>
+        <td>{{d.Website_Link}}</td>
+        <td>{{d.Country}}</td>
+        <td>{{d.Message}}</td>
+    </tr>
+    {% endfor %}
+  </Table>
+</div>
+
+</body>
+</html>
